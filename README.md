@@ -81,7 +81,7 @@ Jika platform ini digunakan oleh banyak pengguna secara nyata, arsitektur saat i
 
 Buat proyek baru di Supabase.
 
-Jalankan eksekusi skrip SQL untuk membuat tabel profiles, posts, products, transactions, messages, likes, dan comments, beserta aturan RLS (Row Level Security)-nya.
+Jalankan eksekusi [skrip SQL](database-setup.sql) untuk membuat tabel profiles, posts, products, transactions, messages, likes, dan comments, beserta aturan RLS (Row Level Security)-nya.
 
 Aktifkan Realtime (Publications) untuk tabel messages, transactions, dan products.
 
