@@ -201,3 +201,11 @@ CREATE POLICY "Bisa kirim pesan ke transaksi sendiri" ON public.messages FOR INS
     WHERE t.id = transaction_id AND (t.buyer_id = auth.uid() OR t.seller_id = auth.uid())
   )
 );
+
+-- ============================================================================
+-- 5. KONFIGURASI REALTIME PUBLICATIONS (OTOMATIS)
+-- ============================================================================
+-- Mengaktifkan pengiriman event real-time (WebSockets) untuk tabel chat, transaksi, dan stok produk
+ALTER PUBLICATION supabase_realtime ADD TABLE public.messages;
+ALTER PUBLICATION supabase_realtime ADD TABLE Public.transactions;
+ALTER PUBLICATION supabase_realtime ADD TABLE public.products;
